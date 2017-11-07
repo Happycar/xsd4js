@@ -48,7 +48,7 @@ export default class BookType {
     }
 }
 ```
-Check the folder [`./.example/`][folder-example] in order to have a better overview of the parser capabilities as:
+Check the folder [`./.examples/`][folder-example] in order to have a better overview of the parser capabilities as:
 
 * ENUM
 * Array
