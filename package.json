@@ -1,0 +1,22 @@
+{
+  "name": "xsd4js",
+  "version": "1.0.0",
+  "description": "Converts XSD schemas in ES6 classes with nested parsing architecture.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Happycar/xsd4js"
+  },
+  "main": "index.js",
+  "authors": [
+    {
+      "name": "Marcelo Filho",
+      "email": "marcelo.filho@happycar.de"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^4.0.2",
+    "xml2js": "^0.4.19",
+    "xsd": "0.0.2"
+  }
+}
