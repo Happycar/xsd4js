@@ -48,7 +48,7 @@ export default class BookType {
     }
 }
 ```
-Check the folder [`./.example/`][https://github.com/Happycar/xsd4js/tree/master/.examples] in order to have a better overview of the parser capabilities as:
+Check the folder [`./.example/`][folder-example] in order to have a better overview of the parser capabilities as:
 
 * ENUM
 * Array
@@ -74,6 +74,10 @@ Folder: `xsd4js ./.examples/bin ./.examples/`
 
 ## Contributing
 
-If you run into any problems or errors, report them [here][https://github.com/Happycar/xsd4js/issues].
+If you run into any problems or errors, report them [here][tab-issues].
 
-If you want to add something to the project, create a pull request [here][https://github.com/Happycar/xsd4js/pulls].
+If you want to add something to the project, create a pull request [here][tab-pulls].
+
+[folder-example]: https://github.com/Happycar/xsd4js/tree/master/.examples
+[tab-issues]: https://github.com/Happycar/xsd4js/issues
+[tab-pulls]: https://github.com/Happycar/xsd4js/pulls
