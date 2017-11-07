@@ -1,39 +1,40 @@
-const begin = Date.now();
+module.exports = function () {
+    const begin = Date.now();
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-const fs = require("fs-extra");
-const parseString = require('xml2js').parseString;
+    const fs = require("fs-extra");
+    const parseString = require('xml2js').parseString;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-let filesGenerated = 0;
-let enumsGenerated = 0;
-let errorCount = 0;
+    let filesGenerated = 0;
+    let enumsGenerated = 0;
+    let errorCount = 0;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-let SOURCE_BIN = addLastSlash(process.argv[2]);
-let BIN = SOURCE_BIN;
-let SOURCE_SOURCE_PATH = null;
+    let SOURCE_BIN = addLastSlash(process.argv[2]);
+    let BIN = SOURCE_BIN;
+    let SOURCE_SOURCE_PATH = null;
 
-try {
-    fs.removeSync(SOURCE_BIN);
-} catch (e) {
-    // if not able to remove keep going...
-}
+    try {
+        fs.removeSync(SOURCE_BIN);
+    } catch (e) {
+        // if not able to remove keep going...
+    }
 
-let sourcePath = process.argv[3];
+    let sourcePath = process.argv[3];
 
-if (fs.lstatSync(sourcePath).isFile()) {
-    extractFromFile(sourcePath);
-} else {
-    SOURCE_SOURCE_PATH = sourcePath;
+    if (fs.lstatSync(sourcePath).isFile()) {
+        extractFromFile(sourcePath);
+    } else {
+        SOURCE_SOURCE_PATH = sourcePath;
 
-    extractFromDirectory(sourcePath);
-}
+        extractFromDirectory(sourcePath);
+    }
 
-console.log(`
+    console.log(`
 ============================================================
 
 \tCreated files:\t${filesGenerated}
@@ -45,6 +46,7 @@ console.log(`
 
 ============================================================
 `);
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -649,7 +651,7 @@ ${errors}
             });
 
         const className = getAsClassName(propertyType);
-        
+
         const classCodeString = [
             `export default class ${className} {`,
             `    ${enums.sort(sortAlphabetic).join('\n    ')}`,
