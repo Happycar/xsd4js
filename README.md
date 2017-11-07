@@ -48,8 +48,7 @@ export default class BookType {
     }
 }
 ```
-
-Check the folder `./.example/` in order to have a better overview of the parser capabilities as:
+Check the folder [`./.example/`][https://github.com/Happycar/xsd4js/tree/master/.examples] in order to have a better overview of the parser capabilities as:
 
 * ENUM
 * Array
@@ -72,3 +71,9 @@ You must define the output folder and the XSD file or folder:
 File: `xsd4js ./.examples/bin ./.examples/example.xsd`
 
 Folder: `xsd4js ./.examples/bin ./.examples/`
+
+## Contributing
+
+If you run into any problems or errors, report them [here][https://github.com/Happycar/xsd4js/issues].
+
+If you want to add something to the project, create a pull request [here][https://github.com/Happycar/xsd4js/pulls].
